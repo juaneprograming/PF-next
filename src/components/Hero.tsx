@@ -1,4 +1,4 @@
-import Link from "next/link"
+ import Link from "next/link"
 import { Button } from "./ui/button"
 import { Download, Send } from "lucide-react"
 
@@ -39,7 +39,9 @@ const Hero = () => {
                     <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0' iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"/>
                 </div>
                 {/*imagen*/}
-                <div className="hidden xl:flex relative">image</div>
+                <div className="hidden xl:flex relative">
+                    <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500] bg-no-repeat absolute -top-1 -right-2"></div>
+                </div>
             </div>
             {/*icon*/}
             <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">

@@ -40,7 +40,8 @@ const Hero = () => {
                 </div>
                 {/*imagen*/}
                 <div className="hidden xl:flex relative">
-                    <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500] bg-no-repeat absolute -top-1 -right-2"></div>
+                    <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500] bg-no-repeat absolute -top-1 -right-2">imagen</div>
+                    <DevImg containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-button" />
                 </div>
             </div>
             {/*icon*/}

@@ -1,4 +1,4 @@
- import Link from "next/link"
+import Link from "next/link"
 import { Button } from "./ui/button"
 import { Download, Send } from "lucide-react"
 
@@ -29,19 +29,40 @@ const Hero = () => {
                     {/*boton*/}
                     <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
                         <Link href={'/contact'}>
-                        <Button className="gap-x-2">Contac Me <Send size={18}/>
-                        </Button>
+                            <Button className="gap-x-2">Contac Me <Send size={18} />
+                            </Button>
                         </Link>
-                        <Button variant='secondary' className="gap-x-2">Descargar CV <Download size={18}/>
+                        <Button variant='secondary' className="gap-x-2">Descargar CV <Download size={18} />
                         </Button>
                     </div>
                     {/*socials*/}
-                    <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0' iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"/>
+                    <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0' iconsStyles="text-foreground text-[22px] hover:text-primary transition-all" />
                 </div>
                 {/*imagen*/}
                 <div className="hidden xl:flex relative">
-                    <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500] bg-no-repeat absolute -top-1 -right-2">imagen</div>
-                    <DevImg containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-button" />
+                    {/*badge 1*/}
+                    <Badge
+                        containerStyles='absolute top-[24%] -left-[5rem]'
+                        icon={<RiBriefcase4Fill />}
+                        endContNum={2}
+                        badgeText='Años de Experiencia' endCountText={""} />
+                    {/*badge 2*/}
+                    <Badge
+                        containerStyles='absolute top-[80%] -left-[1rem]'
+                        icon={<RiTodoFill />}
+                        endContNum={2}
+                        endCountText='k'
+                        badgeText='Finished Projects' />
+                    {/*badge 3*/}
+                    <Badge
+                        containerStyles='absolute top-[55%] -right-8'
+                        icon={<RiTeamFill />}
+                        endContNum={2}
+                        endCountText='k'
+                        badgeText='Clientes Felices' />
+
+                    <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
+                    <DevImg containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-button" imgSrc='/hero/JE.png' />
                 </div>
             </div>
             {/*icon*/}

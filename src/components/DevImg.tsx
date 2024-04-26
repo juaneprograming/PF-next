@@ -1,10 +1,17 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-const DevImg = ({containerStyles, imgSrc}) => {
-  return <div className={`${containerStyles}`}>
-    <Image src={imgSrc} fill priority alt=''/>
-  </div>
-  
+interface DevImgProps {
+  containerStyles: string;
+  imgSrc: string;
 }
 
-export default DevImg
+const DevImg: React.FC<DevImgProps> = ({ containerStyles, imgSrc }) => {
+  return (
+    <div className={containerStyles}>
+      <Image src={imgSrc} layout="fill" priority alt="" />
+    </div>
+  );
+};
+
+export default DevImg;
+

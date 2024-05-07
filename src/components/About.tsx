@@ -113,10 +113,30 @@ const About = () => {
             <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
                 About Me
             </h2>
-            <div>
+            <div className='flex flex-col xl:flex-row'>
                 {/* imagenes */}
-                <div>
-                    <DevImg containerStyles='bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative' imgSrc="/about/JE.png"/>
+                <div className='hidden xl:flex flex-1 relative'>
+                    <DevImg containerStyles='bg-about_shape_light dark:bg-about_shape_dark w-[505px] 
+                    h-[505px] bg-no-repeat relative' 
+                    imgSrc="/about/JE.png"
+                    />
+                </div>
+                {/* tabs */}
+                <div className='flex-1'>
+                    <Tabs defaultValue='personal'>
+                        <TabsList className='w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none '>
+                            <TabsTrigger value='personal'>Informacion Personal</TabsTrigger>
+                            <TabsTrigger value='qualifications'>Qualifications</TabsTrigger>
+                            <TabsTrigger value='skills'>Skills</TabsTrigger>
+                        </TabsList>
+                        {/* tabs content */}
+                        <div className='text-lg mt-12 xl:mt-8 '>
+                            {/* personal */}
+                            <TabsContent value='personal'>Informacion Personal</TabsContent>
+                            <TabsContent value='qualifications'>Qualifications info</TabsContent>
+                            <TabsContent value='skills'>Skills info</TabsContent>
+                        </div>
+                    </Tabs>
                 </div>
             </div>
         </div>

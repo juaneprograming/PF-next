@@ -87,7 +87,7 @@ const skillData = [
                 imgPath: '/about/css.svg',
             },
             {
-                imagPath: '/about/javascript.svg',
+                imagPath: '/about/JS.svg',
             },
             {
                 imgPath: '/about/react.svg',

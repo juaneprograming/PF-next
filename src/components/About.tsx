@@ -87,7 +87,7 @@ const skillData = [
                 imgPath: '/about/css.svg',
             },
             {
-                imagPath: '/about/JS.svg',
+                imagPath: '/about/js.svg',
             },
             {
                 imgPath: '/about/react.svg',
@@ -101,7 +101,7 @@ const skillData = [
         ]
     },
 ]
-
+// /about/javascript.svg
 const About = () => {
     const getData = (arr: { title: string }[], title: string) => {
         return arr.find((item) => item.title === title);
@@ -164,15 +164,15 @@ const About = () => {
                                         {/* experiencia */}
                                         <div className='flex flex-col gap-y-6'>
                                             <div className='flex gap-x-4 items-center text-[22px] text-primary'>
-                                                <Briefcase size={28}/>
+                                                <Briefcase size={28} />
                                                 <h4 className='capitalize font-medium'>
                                                     {getData(qualificationData, 'Experiencia').title}
                                                 </h4>
                                                 <div>
                                                     {/* lista */}
                                                     <div className='flex flex-col gap-y-8'>
-                                                        {getData(qualificationData, 'Experiencia').data.map((item, index)=>{
-                                                            const {compañia, role, años} = item;
+                                                        {getData(qualificationData, 'Experiencia').data.map((item, index) => {
+                                                            const { compañia, role, años } = item;
                                                             return (
                                                                 <div className='flex gap-x-8 group ' key={index}>
 
@@ -201,8 +201,8 @@ const About = () => {
                                                 <div>
                                                     {/* lista */}
                                                     <div className='flex flex-col gap-y-8'>
-                                                        {getData(qualificationData, 'education').data.map((item, index)=>{
-                                                            const {universidad, quialification, años} = item;
+                                                        {getData(qualificationData, 'education').data.map((item, index) => {
+                                                            const { universidad, quialification, años } = item;
                                                             return (
                                                                 <div className='flex gap-x-8 group ' key={index}>
 
@@ -236,10 +236,10 @@ const About = () => {
                                         <div>
                                             {getData(skillData, 'skills').data.map(
                                                 (item, index) => {
-                                                    const {name} = item;
-                                                return <div className='w-2/4 text-center xl:text-left mx-auto xl:mx-0' key={index}>
-                                                    <div className='font-medium'>{name}</div>
-                                                </div>
+                                                    const { name } = item;
+                                                    return <div className='w-2/4 text-center xl:text-left mx-auto xl:mx-0' key={index}>
+                                                        <div className='font-medium'>{name}</div>
+                                                    </div>
                                                 }
                                             )}
                                         </div>
@@ -250,16 +250,14 @@ const About = () => {
                                         <div className='border-b border-border mb-4'></div>
                                         {/* lista de herramientas */}
                                         <div>
-                                            {getData(skillData, 'tools').data.map((item, index) => {
-                                            
-                                            const {imgPath} = item;
-                                            return <div>
-                                                <Image src={imgPath} width={48} height={48} alt='' priority />
-                                            </div>
-
-                                            }
-                                        
-                                        )}
+                                            {getData(skillData, 'tools').data.map((item: Item, index: number) => {
+                                                const { imgPath } = item;
+                                                return (
+                                                    <div key={index}>
+                                                        <Image src={imgPath} width={48} height={48} alt='' priority />
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                 </div>

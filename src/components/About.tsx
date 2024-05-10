@@ -2,6 +2,7 @@ import DevImg from './DevImg'
 import Image from 'next/image'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
+
 import {
     User2,
     MailIcon,
@@ -73,7 +74,10 @@ const skillData = [
                 name: 'Front-end Developer',
             },
             {
-                name: ' JAVASCRIPT, PHP, React, NextJS',
+                name: ' Javascript, PHP, React, NextJS,',
+            },
+            {
+                name: ' PostgresSQL, Codeigniter,',
             },
         ]
     },
@@ -87,7 +91,7 @@ const skillData = [
                 imgPath: '/about/css.svg',
             },
             {
-                imagPath: '/about/js.svg',
+                imgPath: '/about/javascript.svg',
             },
             {
                 imgPath: '/about/react.svg',
@@ -97,6 +101,12 @@ const skillData = [
             },
             {
                 imgPath: '/about/next.svg',
+            },
+            {
+                imgPath: '/about/cdi.svg',
+            },
+            {
+                imgPath: '/about/pgsql.svg',
             },
         ]
     },
@@ -249,12 +259,19 @@ const About = () => {
                                         <h4 className='text-xl font-semibold mb-2 xl:text-left'>Tools</h4>
                                         <div className='border-b border-border mb-4'></div>
                                         {/* lista de herramientas */}
-                                        <div>
+                                        <div className='flex gap-x-8 justify-center xl:justify-start'>
                                             {getData(skillData, 'tools').data.map((item: Item, index: number) => {
                                                 const { imgPath } = item;
                                                 return (
                                                     <div key={index}>
-                                                        <Image src={imgPath} width={48} height={48} alt='' priority />
+                                                        <Image 
+                                                        src={imgPath} 
+                                                        width={48} 
+                                                        height={48}
+                                                        className='ease-in duration-200 transition-all hover:scale-110'
+                                                        alt='' 
+                                                        priority 
+                                                        />
                                                     </div>
                                                 );
                                             })}

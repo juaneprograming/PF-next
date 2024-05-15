@@ -108,14 +108,16 @@ const skillData = [
             {
                 imgPath: '/about/pgsql.svg',
             },
-        ]
+        ],
     },
 ]
 // /about/javascript.svg
 const About = () => {
-    const getData = (arr: { title: string }[], title: string) => {
-        return arr.find((item) => item.title === title);
+    const getData = (arr: { title: string; data: any[] }[], title: string) => {
+        return arr.find((item) => item.title === title) || { title: '', data: [] };
     };
+
+
 
 
     return <section className='xl:h-[860px] pb-12 xl:py-24'>
@@ -260,17 +262,17 @@ const About = () => {
                                         <div className='border-b border-border mb-4'></div>
                                         {/* lista de herramientas */}
                                         <div className='flex gap-x-8 justify-center xl:justify-start'>
-                                            {getData(skillData, 'tools').data.map((item: Item, index: number) => {
+                                            {getData(skillData, 'tools').data.map((item: { imgPath: string }, index: number) => {
                                                 const { imgPath } = item;
                                                 return (
                                                     <div key={index}>
-                                                        <Image 
-                                                        src={imgPath} 
-                                                        width={48} 
-                                                        height={48}
-                                                        className='ease-in duration-200 transition-all hover:scale-110'
-                                                        alt='' 
-                                                        priority 
+                                                        <Image
+                                                            src={imgPath}
+                                                            width={48}
+                                                            height={48}
+                                                            className='ease-in duration-200 transition-all hover:scale-110'
+                                                            alt=''
+                                                            priority
                                                         />
                                                     </div>
                                                 );

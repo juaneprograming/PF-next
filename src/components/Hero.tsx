@@ -23,8 +23,8 @@ const Hero = () => {
                 <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
                     <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Web Developer</div>
                     <h1 className="h1 mb-4">Hola, Mi Nombre es Juan Ojeda</h1>
-                    <p className="subtitle max-w-[490px] mx-auto xl:mx-0">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno
-                        estándar de las industrias desde el año 1500, cuando un impresor
+                    <p className="subtitle max-w-[490px] mx-auto xl:mx-0">Soy un Joven que siempre busca innovar y proponer ideas para mejorar y aprender nuevos desafios y siempre Dispuesto a darlo mejor en
+                        mi trabajo.
                     </p>
                     {/*boton*/}
                     <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">

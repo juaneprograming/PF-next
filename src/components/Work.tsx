@@ -20,13 +20,13 @@ const projectData = [
         image: '/work/sap.png',
         category: 'php',
         name: 'Sistema de Atencion Psicologica',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis natus numquam, quis ullam mollitia sequi, ut placeat iusto, ducimus tempora rem consequatur saepe aperiam dolores adipisci optio dignissimos debitis reiciendis.',
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
     },
     {
-        image: '/work/R&M.png',
+        image: '/work/R&M.jpg',
         category: 'React js',
         name: 'Rick & Morty Project',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis natus numquam, quis ullam mollitia sequi, ut placeat iusto, ducimus tempora rem consequatur saepe aperiam dolores adipisci optio dignissimos debitis reiciendis.',
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
         link: '/',
         github: '/',
     },
@@ -54,7 +54,7 @@ const Work = () => {
                     </SwiperSlide>
                 })}
             </Swiper>
-        </div>
+        </div> 
     </div>
   </section>
   

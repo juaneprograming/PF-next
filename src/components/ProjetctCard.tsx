@@ -11,6 +11,7 @@ interface Project {
   name: string;
   description: string;
   image: string;
+  link: string;
 }
 
 const ProjectCard = ({ project }: {
@@ -18,10 +19,10 @@ const ProjectCard = ({ project }: {
   : Project
 }) => {
   return (
-    <Card>
+    <Card className='group overflow-hidden relative'>
       <CardHeader className='p-0'>
         {/* imagen */}
-        <div className='relative w-full h-[300px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 xl:'>
+        <div className='relative w-full h-[300px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light xl:dark-work_project_bg_dark xl:bg-[110%] xl:bg-no-repeat overflow-hidden'>
           <Image
             className="absolute bottom-8 shadow-2xl"
             src={project.image}
@@ -31,6 +32,24 @@ const ProjectCard = ({ project }: {
             priority
             style={{ borderRadius: '10px' }}
           />
+          {/* botones */}
+          <div>
+            <Link href={project.link} className='bg-secondary 
+            w-[54px] h-[54px] 
+            rounded-full 
+            flex 
+            justify-center 
+            items-center 
+            scale-0 opacity-0 
+            group-hover:scale-100 
+            group-hover:opacity-100 
+            transition-all duration-200'>
+              <Link2Icon className='text-white' />
+              </Link>
+            <Link href={project.link} className='bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group:hover:opacity-100 transition-all duration-200 ease-in-out'>
+              <Link2Icon className='text-white' />
+              </Link>
+          </div>
         </div>
       </CardHeader>
       <div className="h-full px-8 py-6">

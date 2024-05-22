@@ -15,20 +15,20 @@ const reviewData = [
         avatar: '/reviews/avatar-1.png',
         name: 'Julio Watsamara',
         job: 'Analista',
-        review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est consequatur minus commodi suscipit voluptate incidunt optio dolorem reprehenderit et, cum totam explicabo aspernatur cumque architecto omnis sapiente id harum obcaecati.',
+        review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est consequatur minus commodi suscipit voluptate incidunt optio dolorem reprehenderit et,',
     },
     {
         avatar: '/reviews/avatar-2.png',
         name: 'Carlos Barrera',
         job: 'Morrraniando',
-        review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est consequatur minus commodi suscipit voluptate incidunt optio dolorem reprehenderit et, cum totam explicabo aspernatur cumque architecto omnis sapiente id harum obcaecati.',
+        review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est consequatur minus commodi suscipit voluptate incidunt optio dolorem reprehenderit et,',
 
     },
     {
         avatar: '/reviews/avatar-3.png',
         name: 'Mochito Dev',
         job: 'Dueño del real tapita',
-        review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est consequatur minus commodi suscipit voluptate incidunt optio dolorem reprehenderit et, cum totam explicabo aspernatur cumque architecto omnis sapiente id harum obcaecati.',
+        review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est consequatur minus commodi suscipit voluptate incidunt optio dolorem reprehenderit et,',
     },
 ]
 
@@ -52,12 +52,19 @@ const Reviews = () => {
         >
             {reviewData.map((person, index)=> {
                 return <SwiperSlide key={index}>
-                   <Card>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Vel maxime voluptatum numquam ullam. 
-                    Tempora alias, 
-                    deserunt fugiat dicta exercitationem accusamus 
-                    consequuntur repudiandae esse fugit sapiente distinctio, 
-                    maiores repellat dignissimos blanditiis.
+                   <Card className='bg-tertiary dark:bg-secondary/40 p-8 min-h-[300px]'>
+                    <CardHeader className='p-0 mb-10'>
+                        <div className='flex items-center gap-x-4'>
+                            {/* imagen */}
+                            <Image src={person.avatar} alt={''} width={70} height={70} priority />
+                            {/* name */}
+                            <div className='flex flex-col'>
+                                <CardTitle>{person.name}</CardTitle>
+                                <p>{person.job}</p>
+                            </div>
+                        </div>
+                    </CardHeader>
+                    <CardDescription className='text-lg text-muted-foreground'>{person.review}</CardDescription>
                     </Card> 
                 </SwiperSlide>
             })}

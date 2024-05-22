@@ -52,7 +52,15 @@ const Projects = () => {
   const [categories, setCategories] = useState(uniqueCategories)
   const [category, setCategory] = useState('Todos los proyectos')
 
-  return <section className='min-h-screen pt-12'>
+  const filteredProjects = projectData.filter(project => {
+    //si la categoria es "todos los proyectos" retorna todos los proyectos si el filtor es categoria
+    return category === 'Todos los proyectos' 
+    ? project
+    : project.category === category
+
+  })
+
+  return ( <section className='min-h-screen pt-12'>
     <div className='container mx-auto'>
       <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
         Mis Proyectos
@@ -61,13 +69,15 @@ const Projects = () => {
         <Tabs defaultValue={category}>
           <TabsList className='w-full grid h-full md:grid-cols-4 lg:max-w-[640px] mb-12 mx-auto md:border-none'>
             {categories.map((category, index)=>{
-              return <TabsTrigger value={category} key={index} className='capitalize w-[162px] md:w-auto'>{category}</TabsTrigger>
+              return <TabsTrigger onClick={()=>setCategory(category)} value={category} key={index} className='capitalize w-[162px] md:w-auto'>{category}</TabsTrigger>
             })}
           </TabsList>
+          {/* contenido de los tabs */}
+          <div>tabs content</div>
         </Tabs>
     </div>
   </section>
-  
+  )
 }
 
 export default Projects

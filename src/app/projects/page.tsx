@@ -59,9 +59,9 @@ const Projects = () => {
         </h2>
         {/* tabs */}
         <Tabs defaultValue={category}>
-          <TabsList>
+          <TabsList className='w-full grid h-full md:grid-cols-4 lg:max-w-[640px] mb-12 mx-auto md:border-none'>
             {categories.map((category, index)=>{
-              return <TabsTrigger value={category}>{category}</TabsTrigger>
+              return <TabsTrigger value={category} key={index} className='capitalize w-[162px] md:w-auto'>{category}</TabsTrigger>
             })}
           </TabsList>
         </Tabs>

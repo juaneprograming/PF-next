@@ -26,20 +26,23 @@ const Contact = () => {
         {/* text de info y formulario */}
         <div className="grid xl:grid-cols-2 mb-24 xl:mb-32">
           {/* info texto */}
-          <div className="flex items-center space-x-3">
-            <MailIcon size={18} className="text-primary" />
+          <div className="flex flex-col gap-y-4 xl:gap-y-14 mb-12 xl:mb-24 text-base xl:text-lg">
             {/* emial */}
-            <div>Ojuan2594@gmail.com</div>
-          </div>
-          <div className="flex items-center space-x-3">
+            <div className="flex items-center gap-x-8">
+              <MailIcon size={18} className="text-primary" />
+              <div>Ojuan2594@gmail.com</div>
+            </div>
+          
+          <div className="flex items-center gap-x-8">
+            {/* ubicacion */}
             <HomeIcon size={18} className="text-primary" />
-            {/* emial */}
-            <div>Ojuan2594@gmail.com</div>
+            <div>Cartagena de Indias</div>
           </div>
-          <div className="flex items-center space-x-3">
-            <PhoneIcon size={18} className="text-primary" />
-            {/* emial */}
-            <div>Ojuan2594@gmail.com</div>
+          <div className="flex items-center gap-x-8">
+            {/* numero */}
+            <PhoneIcon size={18} className="text-primary" />  
+            <div>+57 3017784175</div>
+          </div>
           </div>
           <form>form</form>
         </div>

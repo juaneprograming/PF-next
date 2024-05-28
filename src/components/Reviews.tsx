@@ -13,7 +13,7 @@ import { Pagination } from 'swiper/modules';
 const reviewData = [
     {
         avatar: '/reviews/avatar-1.png',
-        name: 'Julio Watsamara',
+        name: 'Erick',
         job: 'Analista',
         review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est consequatur minus commodi suscipit voluptate incidunt optio dolorem reprehenderit et,',
     },

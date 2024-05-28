@@ -1,4 +1,6 @@
-import { MailIcon, HomeIcon, PhoneIcon } from "lucide-react";
+import Form from "@/components/Form";
+import { MailIcon, HomeIcon, PhoneIcon, EarthIcon } from "lucide-react";
+
 
 const Contact = () => {
   return (
@@ -32,19 +34,18 @@ const Contact = () => {
               <MailIcon size={18} className="text-primary" />
               <div>Ojuan2594@gmail.com</div>
             </div>
-          
-          <div className="flex items-center gap-x-8">
-            {/* ubicacion */}
-            <HomeIcon size={18} className="text-primary" />
-            <div>Cartagena de Indias</div>
+            <div className="flex items-center gap-x-8">
+              {/* ubicacion */}
+              <EarthIcon size={18} className="text-primary" />
+              <div>Cartagena de Indias</div>
+            </div>
+            <div className="flex items-center gap-x-8">
+              {/* numero */}
+              <PhoneIcon size={18} className="text-primary" />
+              <div>+57 3017784175</div>
+            </div>
           </div>
-          <div className="flex items-center gap-x-8">
-            {/* numero */}
-            <PhoneIcon size={18} className="text-primary" />  
-            <div>+57 3017784175</div>
-          </div>
-          </div>
-          <form>form</form>
+          <Form />
         </div>
       </div>
     </section>

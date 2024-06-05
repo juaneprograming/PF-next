@@ -10,17 +10,17 @@ import {
 const servicesData = [
     {
         icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
-        title: 'Web Desing',
+        title: 'Diseño Web',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur labore repudiandae ad dolorem rerum provident!',
     },
     {
         icon: <Blocks size={72} strokeWidth={0.8} />,
-        title: 'Web Development',
+        title: 'Desarrollo Web',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur labore repudiandae ad dolorem rerum provident!',
     },
     {
         icon: <Gem size={72} strokeWidth={0.8} />,
-        title: 'App Development',
+        title: 'Desarrollo de Apps',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur labore repudiandae ad dolorem rerum provident!',
     },
 ]

@@ -1,6 +1,9 @@
+'use client'
+
 import Link from "next/link"
 import { Button } from "./ui/button"
 import { Download, Send } from "lucide-react"
+import AnimationText from "./AnimationText"
 
 import {
     RiBriefcase4Fill,
@@ -22,7 +25,7 @@ const Hero = () => {
                 {/*texto*/}
                 <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
                     <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Web Developer</div>
-                    <h1 className="h1 mb-4">Hola, Mi Nombre es Juan Ojeda</h1>
+                    <h1 className="h1 mb-4"><AnimationText/></h1>
                     <p className="subtitle max-w-[490px] mx-auto xl:mx-0">Soy un Joven que siempre busca innovar y proponer ideas para mejorar y aprender nuevos desafios y siempre Dispuesto a darlo mejor en
                         mi trabajo.
                     </p>

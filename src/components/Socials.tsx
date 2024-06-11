@@ -9,7 +9,7 @@ interface IconProps {
 
 const icons: IconProps[] = [
   { path: '/', icon: <RiLinkedinFill /> },
-  { path: '/', icon: <RiGithubFill /> },
+  { path: 'https://github.com/juaneprograming', icon: <RiGithubFill /> },
   { path: '/', icon: <RiInstagramFill /> },
   { path: '/', icon: <RiFacebookFill /> },
 ]

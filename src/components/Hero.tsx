@@ -25,7 +25,7 @@ const Hero = () => {
                 {/*texto*/}
                 <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
                     <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Web Developer</div>
-                    <h1 className="h1 mb-4"><AnimationText/></h1>
+                    <h1 className="h1 mb-4"><AnimationText /></h1>
                     <p className="subtitle max-w-[490px] mx-auto xl:mx-0">Soy un Joven que siempre busca innovar y proponer ideas para mejorar y aprender nuevos desafios y siempre Dispuesto a darlo mejor en
                         mi trabajo.
                     </p>
@@ -35,8 +35,11 @@ const Hero = () => {
                             <Button className="gap-x-2">Contac Me <Send size={18} />
                             </Button>
                         </Link>
-                        <Button variant='secondary' className="gap-x-2">Descargar CV <Download size={18} />
-                        </Button>
+                        <a href="" download>
+                            <Button variant='secondary' className="gap-x-2">
+                                Descargar CV <Download size={18} />
+                            </Button>
+                        </a>
                     </div>
                     {/*socials*/}
                     <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0' iconsStyles="text-foreground text-[22px] hover:text-primary transition-all" />
@@ -50,12 +53,12 @@ const Hero = () => {
                         endContNum={2}
                         badgeText='Años de Experiencia' endCountText={""} />
                     {/*badge 2*/}
-                    <Badge
+                    {/* <Badge
                         containerStyles='absolute top-[80%] -left-[1rem]'
                         icon={<RiTodoFill />}
                         endContNum={2}
                         endCountText='k'
-                        badgeText='Finished Projects' />
+                        badgeText='Finished Projects' /> */}
                     {/*badge 3*/}
                     <Badge
                         containerStyles='absolute top-[55%] -right-8'

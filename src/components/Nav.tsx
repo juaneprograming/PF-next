@@ -14,8 +14,8 @@ interface NavProps {
 
 const links = [
   { path: '/', name: 'home' },
-  { path: '/projects', name: 'my projects' },
-  { path: '/contact', name: 'contact' },
+  { path: '/projects', name: 'Mis Proyectos' },
+  { path: '/contact', name: 'Contactame' },
 ];
 
 const Nav: React.FC<NavProps> = ({ containerStyles, linkStyles, underlineStyles }) => {

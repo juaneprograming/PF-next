@@ -32,7 +32,7 @@ const Hero = () => {
                     {/*boton*/}
                     <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
                         <Link href={'/contact'}>
-                            <Button className="gap-x-2">Contac Me <Send size={18} />
+                            <Button className="gap-x-2">Contactame <Send size={18} />
                             </Button>
                         </Link>
                         <a href={'@/public/Cv juan Ojeda .pdf'} download>

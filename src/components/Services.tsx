@@ -21,7 +21,7 @@ const servicesData = [
     {
         icon: <Gem size={72} strokeWidth={0.8} />,
         title: 'Desarrollo de Apps',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur labore repudiandae ad dolorem rerum provident!',
+        description: 'Desarrollo aplicaciones web modernas y escalables utilizando tecnologías React, Laravel Next JS',
     },
 ]
 
